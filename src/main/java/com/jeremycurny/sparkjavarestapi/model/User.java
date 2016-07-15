@@ -12,16 +12,16 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String email;
 	private String password;
-	
+
 	public User() {
 		super();
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -49,6 +49,6 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", email=" + email + ", password=" + password + "]";
-	}	
-	
+	}
+
 }

@@ -9,8 +9,8 @@ import org.hibernate.service.ServiceRegistry;
 public class HibernateManager {
 
 	private static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-      
-    public static Session openSession() {
-    	return sessionFactory.openSession();
-    }
+
+	public static Session openSession() {
+		return sessionFactory.openSession();
+	}
 }

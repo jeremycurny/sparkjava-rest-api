@@ -11,7 +11,7 @@ import spark.Request;
 import spark.Response;
 
 public class UserController extends RestController {
-	
+
 	@Override
 	public Object create(Request req, Response res) {
 		final User user = (User) JsonUtil.fromJson(req.body(), User.class);

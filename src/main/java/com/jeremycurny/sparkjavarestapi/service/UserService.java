@@ -10,16 +10,16 @@ import com.jeremycurny.sparkjavarestapi.manager.HibernateManager;
 import com.jeremycurny.sparkjavarestapi.model.User;
 
 public class UserService {
-	
+
 	public static User create(User user) {
 		Session session = HibernateManager.openSession();
 		Transaction transaction = session.beginTransaction();
-    	session.persist(user);
-    	transaction.commit();
-        session.close();
+		session.persist(user);
+		transaction.commit();
+		session.close();
 		return user;
-	}	
-	
+	}
+
 	public static boolean deleteById(int id) {
 		final Session session = HibernateManager.openSession();
 		final Transaction transaction = session.beginTransaction();
@@ -31,14 +31,14 @@ public class UserService {
 		session.close();
 		return true;
 	}
-	
+
 	public static List<User> find() {
 		final Session session = HibernateManager.openSession();
 		final Transaction transaction = session.beginTransaction();
 		final Query query = session.createQuery("from User");
 		final List<User> users = (List<User>) query.getResultList();
 		transaction.commit();
-        session.close();
+		session.close();
 		return users;
 	}
 
